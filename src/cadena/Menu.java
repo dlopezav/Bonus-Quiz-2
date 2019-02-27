@@ -18,7 +18,13 @@ public class Menu {
     }
     
     public int Options(){
-        System.out.println("1. Gestion granja\n2. Gestion Manufacturer\n 3.Gestion Distri\n4.Gestion Retail\n5.Guardar registro\n6.Cargar registro");
+        System.out.println("CARGAR ANTES DE USAR\n1. Creacion granja\n2. Creacion Manufacturer\n3. Creacion Distribuidores\n4. Creacion Retail\n5. Gestion del comercio\n6. Guardar registro\n7. Cargar registro\n8.Traza/Compra de producto");
+        Scanner a= new Scanner(System.in);
+        int b = a.nextInt();
+        return b;
+    }
+    public int ventas(){
+        System.out.println("\n1. Asignar producto a Manufactura \n2. Asignar producto de manufactura a distribuidor \n3. Asignar producto de distribuidor a retail");
         Scanner a= new Scanner(System.in);
         int b = a.nextInt();
         return b;

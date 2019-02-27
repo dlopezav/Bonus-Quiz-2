@@ -18,12 +18,11 @@ import java.util.ArrayList;
  * @author dlopezav
  */
 public class DistributionCenter extends Eslabon{
-    String ruta;
     private ArrayList<Producto> productos;
     
     public DistributionCenter(String nombre, Direccion direccion, String descripcion) {
         super(nombre, direccion, descripcion);
-        this.ruta = "Archivos/Distri";
+        this.productos = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -49,28 +48,17 @@ public class DistributionCenter extends Eslabon{
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    public boolean guardar() throws FileNotFoundException, IOException{
-        File bb = new File(this.ruta);
-        if(!bb.exists()){
-            bb.createNewFile();
-        }
-        PrintStream archivo = new PrintStream(bb);
-        for(Producto b: productos){
-            
-        }
-        archivo.flush();
-        archivo.close();
-        return true;
+
+    public ArrayList<Producto> getProductos() {
+        return productos;
     }
-     public ArrayList<Producto> Cargar() throws FileNotFoundException, IOException{
-        ArrayList<Producto> product = new ArrayList<>();
-        FileReader fr = new FileReader (new File(this.ruta)); 
-        BufferedReader carga = new BufferedReader(fr);
-        while(carga.ready()){
-            String q = carga.readLine();
-            
-        }
-        carga.close();
-        return product;
+
+    public void setProductos(ArrayList<Producto> productos) {
+        this.productos = productos;
     }
+
+    public void addProducto(Producto producto) {
+        this.productos.add(producto);
+    }
+    
 }

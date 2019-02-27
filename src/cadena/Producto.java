@@ -15,11 +15,21 @@ public class Producto {
     private String nombre;
     private ArrayList<String> items;
     private double precio;
+    private ArrayList<String> traza;
     private Fecha fecha;
+    private int codigo;
 
-    public Producto(ArrayList<String> items, double precio) {
-        this.items = items;
+    public Producto() {
+        this.nombre = nombre;
+        this.fecha = new Fecha();
         this.precio = precio;
+        this.items = new ArrayList<>();
+        this.traza = new ArrayList<>();
+        this.codigo = codigo;
+    }
+    
+    public void añadirTraza(String e){
+        traza.add(e);
     }
 
     public ArrayList<String> getItems() {
@@ -52,6 +62,30 @@ public class Producto {
 
     public void setFecha(Fecha fecha) {
         this.fecha = fecha;
+    }
+
+    public ArrayList<String> getTraza() {
+        return traza;
+    }
+
+    public void setTraza(ArrayList<String> traza) {
+        this.traza = traza;
+    }
+
+    public Producto(String nombre, ArrayList<String> items, double precio, ArrayList<String> traza, Fecha fecha) {
+        this.nombre = nombre;
+        this.items = items;
+        this.precio = precio;
+        this.traza = traza;
+        this.fecha = fecha;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
     
     

@@ -7,41 +7,49 @@ package cadena;
 
 /**
  *
- * @author dlopezav
+ * @author dfeli
  */
-public class Fecha {
-    int dia;
-    int mes;
-    int año;
+class Fecha {
+    private int Retail;
+    private int Manufacturer;
+    private int Distri;
 
-    public Fecha(int dia, int mes, int año) {
-        this.dia = dia;
-        this.mes = mes;
-        this.año = año;
+    public Fecha() {
+        this.Retail = Retail;
+        this.Manufacturer = Manufacturer;
+        this.Distri = Distri;
     }
 
-    public int getDia() {
-        return dia;
+    public int getRetail() {
+        return Retail;
     }
 
-    public void setDia(int dia) {
-        this.dia = dia;
+    public void setRetail(int Retail) {
+        this.Retail = Retail;
     }
 
-    public int getMes() {
-        return mes;
+    public int getManufacturer() {
+        return Manufacturer;
     }
 
-    public void setMes(int mes) {
-        this.mes = mes;
+    public void setManufacturer(int Manufacturer) {
+        this.Manufacturer = Manufacturer;
     }
 
-    public int getAño() {
-        return año;
+    public int getDistri() {
+        return Distri;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setDistri(int Distri) {
+        this.Distri = Distri;
     }
+
+    public Fecha(int Retail, int Manufacturer, int Distri) {
+        this.Retail = Retail;
+        this.Manufacturer = Manufacturer;
+        this.Distri = Distri;
+    }
+
+    
     
 }

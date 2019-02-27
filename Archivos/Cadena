@@ -1,0 +1,25 @@
+
+Farm:Larry:Amigable:23:54
+Cultivo:Leche:
+
+ManuF:Colnta:Bebidas lacteas:13:76
+-:Yogurt:120216:Colnta::Leche:Fruta:
+
+ManuF:California:Jugos:32:21
+-:Hit:170316:California::Agua:Fruta:
+-:Woods:80316:California::Fruta:
+
+Distri:Fedex:Altamente reconocidos:44:123
+-:Yogurt:120328
+
+Distri:Rapidos:Agiles y constantes:76:9
+-:Hit:120328
+
+Distri:SPA:Calidad para el cliente:67:89
+-:Woods:120316
+
+Retail:Juanita:A su servicio:157:34
+-:Yogurt:1620.0:80316:120316:230317:244:
+
+Retail:Walmart:Expertos en ti:48:25
+-:Woods:3750.0:80316:120316:230317:237:

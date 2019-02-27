@@ -19,13 +19,11 @@ import java.util.ArrayList;
  */
 public class Farmer extends Eslabon {
     private ArrayList<String> productos;
-    private String ruta;
 
     public Farmer(String nombre, Direccion direccion, String descripcion) {
         super(nombre, direccion, descripcion);
         this.direccion = direccion;
         this.productos = new ArrayList<>();
-        this.ruta = "Archivos/FarmProductos";
     }
 
     public ArrayList<String> getProductos() {
@@ -64,30 +62,5 @@ public class Farmer extends Eslabon {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    public boolean guardar() throws FileNotFoundException, IOException{
-        File bb = new File(this.ruta);
-        if(!bb.exists()){
-            bb.createNewFile();
-        }
-        PrintStream archivo = new PrintStream(bb);
-        for(String b: productos){
-            archivo.print(b+":");
-        }
-        archivo.flush();
-        archivo.close();
-        return true;
-    }
-     public ArrayList<String> Cargar() throws FileNotFoundException, IOException{
-        ArrayList<String> product = new ArrayList<>();
-        FileReader fr = new FileReader (new File(this.ruta)); 
-        BufferedReader carga = new BufferedReader(fr);
-        while(carga.ready()){
-            String q = carga.readLine();
-            if(q.contains("Farmer")){
-                
-            }
-        }
-        carga.close();
-        return product;
-    }
+
 }

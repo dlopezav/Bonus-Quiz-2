@@ -19,7 +19,7 @@ public abstract class Eslabon {
         this.direccion = direccion;
         this.descripcion = descripcion;
     }
-
+    
     public String getNombre() {
         return nombre;
     }

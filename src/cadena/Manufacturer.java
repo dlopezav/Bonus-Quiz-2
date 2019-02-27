@@ -19,12 +19,13 @@ import java.util.ArrayList;
  */
 public class Manufacturer extends Eslabon{
     private ArrayList<Producto> productos;
-    private String ruta;
 
     public Manufacturer(String nombre, Direccion direccion, String descripcion) {
         super(nombre, direccion, descripcion);
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.descripcion = descripcion;
         this.productos = new ArrayList<>();
-        this.ruta = "Archivos/Manu";
     }
 
 
@@ -35,33 +36,34 @@ public class Manufacturer extends Eslabon{
     public void addProducto(Producto producto) {
         this.productos.add(producto);
     }
-    public boolean guardar() throws FileNotFoundException, IOException{
-        File bb = new File(this.ruta);
-        if(!bb.exists()){
-            bb.createNewFile();
-        }
-        PrintStream archivo = new PrintStream(bb);
-        for(Producto b: productos){
-            archivo.print("\n"+b.getNombre()+":");
-            for(String item: b.getItems()){
-                archivo.print(b+":");
-            }
-        }
-        archivo.flush();
-        archivo.close();
-        return true;
+
+    public String getNombre() {
+        return nombre;
     }
-     public ArrayList<Producto> Cargar() throws FileNotFoundException, IOException{
-        ArrayList<Producto> product = new ArrayList<>();
-        FileReader fr = new FileReader (new File(this.ruta)); 
-        BufferedReader carga = new BufferedReader(fr);
-        while(carga.ready()){
-            String q = carga.readLine();
-            if(q.contains("Farmer")){
-                
-            }
-        }
-        carga.close();
-        return product;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    
+
+    
+    
+    
 }
