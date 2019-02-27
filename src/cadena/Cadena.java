@@ -125,7 +125,11 @@ public class Cadena {
                 case 3:
                 {
                     System.out.println("1.Crear distribuidor ");
+                    try{
                     n = a.nextInt();
+                    }catch(Exception e){
+                        System.out.println("Digito mal");
+                    }
                     switch(n){
                         case 1:
                             System.out.println("Crear distribuidor");
@@ -150,7 +154,12 @@ public class Cadena {
                 case 4:
                 {
                     System.out.println("1.Crear retail ");
-                    int o = a.nextInt();
+                    int o = 0;
+                    try{
+                    o = a.nextInt();
+                    }catch(Exception e){
+                        System.out.println("Digito mal");
+                    }
                     switch(o){
                         case 1:
                             try{
@@ -178,16 +187,19 @@ public class Cadena {
                 case 5:
                 {
                     System.out.println("Venta y creacion de productos");
+                    int f = 0;
+                    try{
+                       f = b.ventas(); 
+                    }catch(Exception e){
+                        System.out.println("Digito mal");
+                    }
                     
-                    int f = b.ventas();
                     switch(f){
                         case 1:
                         {
                             System.out.println("Ingrese nombre del producto:");
                             String name = a.nextLine();
                             System.out.println("Puede repetirse la peticion debido a la clase Scanner");
-                            name = a.nextLine();
-                            System.out.println("Puede llegar a repetir la solicitud por problemas de la clase Scanner");
                             name = a.nextLine();
                             System.out.println("Ingrese nombre de la manufactura");
                             String manu = a.nextLine();
@@ -280,13 +292,8 @@ public class Cadena {
                                 }
                             }
                             }
-                            
-
                         break;
-                        
                     }
-                    
-                    
                 }
                     break;
                 case 6:
